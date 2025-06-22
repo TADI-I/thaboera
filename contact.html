@@ -441,7 +441,7 @@
     .newsletter {
       background: white;
       border-radius: 10px;
-      padding: 30px;
+      padding: 20px;
       box-shadow: 0 5px 15px rgba(0,0,0,0.1);
       margin-top: 40px;
       text-align: center;
@@ -458,10 +458,10 @@
     }
 
     .newsletter-form {
-      display: flex;
-      max-width: 500px;
-      margin: 0 auto;
-    }
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
 
     .newsletter-form input {
       flex: 1;
@@ -471,15 +471,7 @@
       font-size: 16px;
     }
 
-    .newsletter-form button {
-      padding: 0 20px;
-      background: var(--primary);
-      color: white;
-      border: none;
-      border-radius: 0 4px 4px 0;
-      cursor: pointer;
-      transition: all 0.3s ease;
-    }
+    
 
     .newsletter-form button:hover {
       background: #c1121f;
@@ -788,7 +780,7 @@
           <p>Subscribe to our newsletter for the latest news and offers</p>
           <form class="newsletter-form" action="http://www.thaboera.co.za/Forms/subscribe.php" method="POST">
             <input type="email" name="email" placeholder="your@email.com" required>
-            <button type="submit">Subscribe</button>
+            <button type="submit" class="btn">Subscribe</button>
           </form>
           <p style="font-size: 0.8rem; margin-top: 10px; color: var(--gray);">We respect your privacy. Unsubscribe at any time.</p>
         </div>
