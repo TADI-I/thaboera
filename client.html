@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Client Testimonials | Thaboera IT Solutions</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="images/T-ICON.png" rel="icon">
+  
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9GKP1HMJ67"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-9GKP1HMJ67');
+  </script>
+
+  <style>
+
+    :root {
+      --primary: #e30613;        
+      --secondary: #e60000;      
+      --accent: #ffb200;         
+      --light: #ffffff;         
+      --dark: #9e0000;          
+      --gray: #4b4f54;           
+      --dark-gray: #2c3034;      
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #333;
+      line-height: 1.6;
+      background-color: #f8f9fa;
+    }
+
+        /* Header Styles */
+    .top-header {
+      background: var(--dark);
+      color: white;
+      padding: 8px 0;
+      font-size: 14px;
+      text-align: center;
+    }
+
+    .top-header b {
+      color: var(--accent);
+    }
+
+  .navbar {
+  position: sticky;
+  top: 0;
+  background: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  transition: background 0.3s ease, padding 0.3s ease;
+}
+
+    .navbar-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .navbar.scrolled {
+  background: var(--primary);
+  padding: 10px 20px;
+}
+
+.logo {
+  height: 50px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+   .logo:hover {
+  transform: scale(1.05);
+  filter: brightness(1.2);
+}
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-links ul {
+      display: flex;
+      list-style: none;
+    }
+
+    .nav-links li {
+      margin: 0 15px;
+    }
+
+ .nav-links a {
+  color: var(--dark-gray);
+  font-weight: 500;
+  padding: 8px 0;
+  position: relative;
+  transition: color 0.3s ease, background 0.3s ease;
+  border-radius: 4px;
+}
+
+    .nav-links a:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--primary);
+      transition: width 0.3s ease;
+    }
+
+   .nav-links a:hover {
+  color: white;
+  background: var(--primary);
+  transform: translateY(-2px);
+}
+
+.nav-links a:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--primary);
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover:after,
+.nav-links a.active:after {
+  width: 100%;
+}
+
+    .nav-links a.active {
+      color: var(--primary);
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background: var(--primary);
+      color: white;
+      border: none;
+      border-radius: 4px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .btn:hover {
+      background: #c1121f;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .btn-outline {
+      background: transparent;
+      border: 2px solid var(--primary);
+      color: var(--primary);
+    }
+
+    .btn-outline:hover {
+      background: var(--primary);
+      color: white;
+    }
+
+    .burger-menu {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.close-menu {
+  display: none;
+}
+    .burger-menu span {
+      display: block;
+      width: 25px;
+      height: 3px;
+      background: var(--dark-gray);
+      margin: 5px 0;
+      transition: all 0.3s ease;
+    }
+
+      .close-menu {
+  font-size: 2rem;
+  cursor: pointer;
+  color: var(--gray);
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  z-index: 1001;
+  transition: color 0.3s ease;
+}
+
+.close-menu:hover {
+  color: var(--primary);
+}
+   /* Hero Section */
+    .hero {
+      background: linear-gradient(135deg, var(--secondary) 0%, var(--dark) 100%);
+      color: white;
+      padding: 80px 20px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('images/pattern.png') repeat;
+      opacity: 0.05;
+      pointer-events: none;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+      position: relative;
+      animation: fadeInUp 1s ease;
+    }
+
+    .hero h1:after {
+      content: '';
+      display: block;
+      width: 80px;
+      height: 4px;
+      background: var(--primary);
+      margin: 15px auto 0;
+    }
+
+    .hero p {
+      max-width: 800px;
+      margin: 0 auto 30px;
+      font-size: 1.1rem;
+      opacity: 0.9;
+      animation: fadeInUp 1s ease 0.2s both;
+    }
+
+    .hero-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      animation: fadeInUp 1s ease 0.4s both;
+    }
+
+
+    /* Testimonials Section */
+    .testimonials-section {
+      padding: 80px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .testimonial-card {
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .testimonial-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+    }
+
+    .testimonial-image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .testimonial-content {
+      padding: 20px;
+    }
+
+    .testimonial-content h3 {
+      color: var(--secondary);
+      margin-bottom: 10px;
+    }
+
+    .testimonial-content p {
+      color: var(--gray);
+      font-style: italic;
+      margin-bottom: 15px;
+    }
+
+    .client-name {
+      font-weight: 600;
+      color: var(--secondary);
+    }
+
+    /* Modal */
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.8);
+      z-index: 1000;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      animation: fadeIn 0.3s ease;
+    }
+
+    .modal-content {
+      position: relative;
+      max-width: 90%;
+      max-height: 90%;
+    }
+
+    .modal-image {
+      max-width: 100%;
+      max-height: 90vh;
+      border-radius: 10px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    }
+
+    .close-modal {
+      position: absolute;
+      top: -40px;
+      right: 0;
+      color: white;
+      font-size: 2rem;
+      cursor: pointer;
+      transition: color 0.3s ease;
+    }
+
+    .close-modal:hover {
+      color: var(--primary);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    /* Animation */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Back to Top Button */
+    .back-to-top {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      width: 50px;
+      height: 50px;
+      background: var(--primary);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+      z-index: 999;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    .back-to-top.visible {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .back-to-top:hover {
+      background: #c1121f;
+      transform: translateY(-3px);
+    }
+
+    /* Footer */
+    .footer {
+      background: var(--dark);
+      color: white;
+      padding: 60px 20px 20px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 30px;
+      max-width: 1200px;
+      margin: 0 auto 40px;
+    }
+
+    .footer-col h4 {
+      color: white;
+      margin-bottom: 20px;
+      position: relative;
+      padding-bottom: 10px;
+    }
+
+    .footer-col h4:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 40px;
+      height: 2px;
+      background: var(--primary);
+    }
+
+    .footer-col ul {
+      list-style: none;
+    }
+
+    .footer-col ul li {
+      margin-bottom: 10px;
+    }
+
+    .footer-col ul li a {
+      color: rgba(255,255,255,0.7);
+      transition: color 0.3s ease;
+    }
+
+    .footer-col ul li a:hover {
+      color: var(--accent);
+    }
+
+    .social-links {
+      display: flex;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .social-links a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 50%;
+      color: white;
+      transition: all 0.3s ease;
+    }
+
+    .social-links a:hover {
+      background: var(--primary);
+      transform: translateY(-3px);
+    }
+
+    .footer-bottom {
+      text-align: center;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      font-size: 14px;
+      color: rgba(255,255,255,0.7);
+    }
+
+    /* Responsive Styles */
+     @media (max-width: 768px) {
+      .top-header {
+        font-size: 12px;
+        padding: 8px 0;
+      }
+
+       .close-menu {
+    display: block;
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--gray);
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    z-index: 1001;
+    transition: color 0.3s ease;
+  }
+
+  .close-menu:hover {
+    color: var(--primary);
+  }
+      
+      .burger-menu {
+        display: flex;
+      }
+      
+      .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        max-width: 300px;
+        height: 100vh;
+        background: white;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+        transition: all 0.3s ease;
+        padding: 20px;
+      }
+      
+      .nav-links.active {
+        right: 0;
+      }
+      
+      .nav-links ul {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+      }
+      
+      .nav-links li {
+        margin: 15px 0;
+        width: 100%;
+        text-align: center;
+      }
+      
+      .nav-links a {
+        display: block;
+        padding: 10px 0;
+      }
+      
+      .nav-links .btn {
+        margin-top: 20px;
+      }
+      
+      .section {
+        padding: 60px 0;
+      }
+      
+      .hero h1 {
+        font-size: 2rem;
+      }
+      
+      .values-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero {
+        padding: 60px 20px;
+      }
+      
+      .hero h1 {
+        font-size: 1.8rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Top Header -->
+  <div class="top-header">
+    New Client Support: <b>011 051 3906</b> | Existing Client Support: <b>info@thaboera.co.za</b> | 24/7 IT Emergency: <b>061 541 4097</b>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="navbar-container">
+      <a href="index.html">
+        <img src="images/Update/ThaboEra-Logo.png" alt="ThaboEra IT Solutions" class="logo">
+      </a>
+      
+      <div class="burger-menu" id="burgerMenu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      
+      <div class="nav-links" id="navLinks">
+        <span class="close-menu" id="closeMenuBtn">&times;</span>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about-us.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="client.html" class="active">Clients</a></li>
+          <li><a href="partners.html">Partners</a></li>
+          <li><a href="Policies.html">Policies</a></li>
+        </ul>
+        <a href="contact.html">Contact Us</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Client Testimonials</h1>
+    <p>Here's what our valued clients say about working with Thaboera IT Solutions</p>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="testimonials-section">
+    <div class="testimonials-grid">
+      <!-- Testimonial 1 -->
+      <div class="testimonial-card" onclick="openModal('images/Update/South%20African%20Weather%20SA.jpg')">
+        <img src="images/Update/South%20African%20Weather%20SA.jpg" alt="South African Weather Service Testimonial" class="testimonial-image">
+        <div class="testimonial-content">
+          <h3>South African Weather Service</h3>
+        </div>
+      </div>
+      
+      <!-- Testimonial 2 -->
+      <div class="testimonial-card" onclick="openModal('images/Update/Bank%20Testimonials.jpg')">
+        <img src="images/Update/Bank%20Testimonials.jpg" alt="Bank Testimonial" class="testimonial-image">
+        <div class="testimonial-content">
+          <h3>Major Banking Client</h3>
+        </div>
+      </div>
+      
+      <!-- Testimonial 3 -->
+      <div class="testimonial-card" onclick="openModal('images/Update/ZF-Mgcawu%20Testimonial.jpg')">
+        <img src="images/Update/ZF-Mgcawu%20Testimonial.jpg" alt="ZF Mgcawu Testimonial" class="testimonial-image">
+        <div class="testimonial-content">
+          <h3>ZF Mgcawu District</h3>
+
+        </div>
+      </div>
+      
+      <!-- Testimonial 4 -->
+      <div class="testimonial-card" onclick="openModal('images/AJ-Testimonials.jpg')">
+        <img src="images/AJ-Testimonials.jpg" alt="AJ Testimonial" class="testimonial-image">
+        <div class="testimonial-content">
+          <h3>AJ Holdings</h3>
+        </div>
+      </div>
+      
+      <!-- Testimonial 5 -->
+      <div class="testimonial-card" onclick="openModal('images/EOH.jpg')">
+        <img src="images/EOH.jpg" alt="EOH Testimonial" class="testimonial-image">
+        <div class="testimonial-content">
+          <h3>EOH</h3>
+        </div>
+      </div>
+      
+      <!-- Testimonial 6 -->
+      <div class="testimonial-card" onclick="openModal('images/Ceenex_Testimonial_page-0001.jpg')">
+        <img src="images/Ceenex_Testimonial_page-0001.jpg" alt="Ceenex Testimonial" class="testimonial-image">
+        <div class="testimonial-content">
+          <h3>Ceenex</h3>
+        </div>
+      </div>
+      
+      <!-- Testimonial 7 -->
+      <div class="testimonial-card" onclick="openModal('images/CETA%20TESTIMONIAL%20IT%20EQUIPMENT%20%26%20STATIONERY_page-0001%20(1).jpg')">
+        <img src="images/CETA%20TESTIMONIAL%20IT%20EQUIPMENT%20%26%20STATIONERY_page-0001%20(1).jpg" alt="CETA Testimonial" class="testimonial-image">
+        <div class="testimonial-content">
+          <h3>CETA</h3>
+        </div>
+      </div>
+      
+      <!-- Testimonial 8 -->
+      <div class="testimonial-card" onclick="openModal('images/CETA%20TESTIMONIAL%20UNIFORM_page-0001.jpg')">
+        <img src="images/CETA%20TESTIMONIAL%20UNIFORM_page-0001.jpg" alt="CETA Uniform Testimonial" class="testimonial-image">
+        <div class="testimonial-content">
+          <h3>CETA Uniform Division</h3>
+        </div>
+      </div>
+      
+      <!-- Testimonial 9 -->
+      <div class="testimonial-card" onclick="openModal('images/NURSING%20SCHOOL.jpg')">
+        <img src="images/NURSING%20SCHOOL.jpg" alt="Nursing School Testimonial" class="testimonial-image">
+        <div class="testimonial-content">
+          <h3>Nursing School</h3>
+        </div>
+      </div>
+      
+      <!-- Testimonial 10 -->
+      <div class="testimonial-card" onclick="openModal('images/testimonial%20_Sekelaxabiso_page-0001%20(1).jpg')">
+        <img src="images/testimonial%20_Sekelaxabiso_page-0001%20(1).jpg" alt="Sekelaxabiso Testimonial" class="testimonial-image">
+        <div class="testimonial-content">
+          <h3>Sekelaxabiso</h3>
+        </div>
+      </div>
+      
+      <!-- Testimonial 11 -->
+      <div class="testimonial-card" onclick="openModal('images/Testimonial%20Khano_page-0001.jpg')">
+        <img src="images/Testimonial%20Khano_page-0001.jpg" alt="Khano Testimonial" class="testimonial-image">
+        <div class="testimonial-content">
+          <h3>Khano Solutions</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal -->
+  <div class="modal" id="testimonialModal">
+    <span class="close-modal" onclick="closeModal()">&times;</span>
+    <div class="modal-content">
+      <img id="modalTestimonialImage" class="modal-image" src="#" alt="Client Testimonial">
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>Location</h4>
+        <ul>
+          <li>55 Richard's Drive</li>
+          <li>Halfway House</li>
+          <li>Midrand, 1685</li>
+          <li>South Africa</li>
+        </ul>
+      </div>
+      
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="services.html#itsupport">IT Support</a></li>
+          <li><a href="services.html#webdev">Web Development</a></li>
+          <li><a href="services.html#telecomm">Telecommunication</a></li>
+          <li><a href="services.html#graphicdec">Graphic Design</a></li>
+          <li><a href="services.html#appDev">App Development</a></li>
+          <li><a href="services.html#cloud">Cloud Services</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about-us.html">About Us</a></li>
+          <li><a href="client.html">Our Clients</a></li>
+          <li><a href="Policies.html">Policies</a></li>
+          <li><a href="careers.html">Careers</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <ul>
+          <li>Hours: Mon-Fri 8am-4pm</li>
+          <li>Sat-Sun: Closed</li>
+          <li>Public Holidays: Closed</li>
+        </ul>
+        <div class="social-links">
+          <a href="https://facebook.com/Thaboera" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://twitter.com/thaboera" target="_blank"><i class="fab fa-twitter"></i></a>
+          <a href="https://linkedin.com/company/thaboera" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://instagram.com/thaboerait" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; 2025 ThaboEra IT Solutions. All Rights Reserved.</p>
+      <p>Created by ThaboEra IT Solutions</p>
+    </div>
+  </footer>
+  <!-- Back to Top Button -->
+  <div class="back-to-top" id="backToTop">
+    <i class="fas fa-arrow-up"></i>
+  </div>
+  <script>
+    // Mobile Navigation
+    const burgerMenu = document.getElementById('burgerMenu');
+    const navLinks = document.getElementById('navLinks');
+    
+    burgerMenu.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+      burgerMenu.classList.toggle('active');
+    });
+    
+      const closeMenuBtn = document.getElementById('closeMenuBtn');
+    closeMenuBtn.addEventListener('click', () => {
+      navLinks.classList.remove('active');
+      burgerMenu.classList.remove('active');
+      document.body.style.overflow = 'auto';
+    });
+
+    // Modal functionality
+    function openModal(imageSrc) {
+      const modal = document.getElementById('testimonialModal');
+      const modalImg = document.getElementById('modalTestimonialImage');
+      
+      modal.style.display = 'flex';
+      modalImg.src = imageSrc;
+    }
+    
+    function closeModal() {
+      document.getElementById('testimonialModal').style.display = 'none';
+    }
+    
+    // Close modal when clicking outside the image
+    window.addEventListener('click', function(event) {
+      const modal = document.getElementById('testimonialModal');
+      if (event.target === modal) {
+        closeModal();
+      }
+    });
+    
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+
+      // Back to Top Button
+    const backToTopBtn = document.getElementById('backToTop');
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        backToTopBtn.classList.add('visible');
+      } else { 
+        backToTopBtn.classList.remove('visible');
+      }
+    });
+
+    backToTopBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
+</body>
+</html>

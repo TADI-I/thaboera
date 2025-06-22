@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Strategic Partnerships | Thaboera IT Solutions</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="images/T-ICON.png" rel="icon">
+  
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9GKP1HMJ67"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-9GKP1HMJ67');
+  </script>
+
+  <style>
+    :root {
+      --primary: #e30613;        
+      --secondary: #e60000;      
+      --accent: #ffb200;         
+      --light: #ffffff;         
+      --dark: #9e0000;          
+      --gray: #4b4f54;           
+      --dark-gray: #2c3034;      
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #333;
+      line-height: 1.6;
+      background-color: #f8f9fa;
+    }
+
+    /* Animation */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+    /* Header Styles */
+    .top-header {
+      background: var(--dark);
+      color: white;
+      padding: 8px 0;
+      font-size: 14px;
+      text-align: center;
+    }
+
+    .top-header b {
+      color: var(--accent);
+    }
+
+  .navbar {
+  position: sticky;
+  top: 0;
+  background: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  transition: background 0.3s ease, padding 0.3s ease;
+}
+
+    .navbar-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .navbar.scrolled {
+  background: var(--primary);
+  padding: 10px 20px;
+}
+
+.logo {
+  height: 50px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+   .logo:hover {
+  transform: scale(1.05);
+  filter: brightness(1.2);
+}
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-links ul {
+      display: flex;
+      list-style: none;
+    }
+
+    .nav-links li {
+      margin: 0 15px;
+    }
+
+ .nav-links a {
+  color: var(--dark-gray);
+  font-weight: 500;
+  padding: 8px 0;
+  position: relative;
+  transition: color 0.3s ease, background 0.3s ease;
+  border-radius: 4px;
+}
+
+    .nav-links a:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--primary);
+      transition: width 0.3s ease;
+    }
+
+   .nav-links a:hover {
+  color: white;
+  background: var(--primary);
+  transform: translateY(-2px);
+}
+
+.nav-links a:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--primary);
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover:after,
+.nav-links a.active:after {
+  width: 100%;
+}
+
+    .nav-links a.active {
+      color: var(--primary);
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background: var(--primary);
+      color: white;
+      border: none;
+      border-radius: 4px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .btn:hover {
+      background: #c1121f;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .btn-outline {
+      background: transparent;
+      border: 2px solid var(--primary);
+      color: var(--primary);
+    }
+
+    .btn-outline:hover {
+      background: var(--primary);
+      color: white;
+    }
+
+     .burger-menu {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 5px;
+}
+.close-menu {
+  display: none;
+}
+
+    .burger-menu span {
+      display: block;
+      width: 25px;
+      height: 3px;
+      background: var(--dark-gray);
+      margin: 5px 0;
+      transition: all 0.3s ease;
+    }
+
+      .close-menu {
+  font-size: 2rem;
+  cursor: pointer;
+  color: var(--gray);
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  z-index: 1001;
+  transition: color 0.3s ease;
+}
+
+.close-menu:hover {
+  color: var(--primary);
+}
+
+
+     /* Hero Section */
+    .hero {
+      background: linear-gradient(135deg, var(--secondary) 0%, var(--dark) 100%);
+      color: white;
+      padding: 80px 20px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('images/pattern.png') repeat;
+      opacity: 0.05;
+      pointer-events: none;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+      position: relative;
+      animation: fadeInUp 1s ease;
+    }
+
+    .hero h1:after {
+      content: '';
+      display: block;
+      width: 80px;
+      height: 4px;
+      background: var(--primary);
+      margin: 15px auto 0;
+    }
+
+    .hero p {
+      max-width: 800px;
+      margin: 0 auto 30px;
+      font-size: 1.1rem;
+      opacity: 0.9;
+      animation: fadeInUp 1s ease 0.2s both;
+    }
+
+    .hero-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      animation: fadeInUp 1s ease 0.4s both;
+    }
+
+    /* Main Content */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    .section-title {
+      font-size: 2rem;
+      margin-bottom: 30px;
+      color: var(--secondary);
+      position: relative;
+      padding-bottom: 10px;
+    }
+
+    .section-title:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 60px;
+      height: 3px;
+      background: var(--primary);
+    }
+
+    /* Benefits Section */
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin-bottom: 60px;
+    }
+
+    .benefit-card {
+      background: white;
+      border-radius: 10px;
+      padding: 30px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+    }
+
+    .benefit-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+    }
+
+    .benefit-icon {
+      font-size: 2.5rem;
+      color: var(--primary);
+      margin-bottom: 20px;
+    }
+
+    .benefit-card h3 {
+      color: var(--secondary);
+      margin-bottom: 15px;
+    }
+
+    /* Partners Section */
+    .partners-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      margin-bottom: 60px;
+    }
+    .vpartners {
+      padding: 40px 20px;
+      background: white;
+    }
+
+    .partner-card {
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .partner-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+    }
+
+    .partner-logo {
+      width: 100%;
+      height: 120px;
+      object-fit: contain;
+      margin-bottom: 20px;
+    }
+
+    .partner-card h3 {
+      color: var(--secondary);
+      margin-bottom: 10px;
+    }
+
+
+    /* Alternating Background for Sections */
+section:nth-of-type(odd) {
+  background-color: #FFFFFF;
+}
+
+.section:nth-of-type(even) {
+  background-color: #F8F9FA;
+}
+/* Additional Styling for Section Title */
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333; /* Customize title color */
+}
+
+    /* Modal */
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.8);
+      z-index: 1000;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      animation: fadeIn 0.3s ease;
+    }
+
+    .modal-content {
+      position: relative;
+      max-width: 90%;
+      max-height: 90%;
+    }
+
+    .modal-image {
+      max-width: 100%;
+      max-height: 90vh;
+      border-radius: 10px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    }
+
+    .close-modal {
+      position: absolute;
+      top: -40px;
+      right: 0;
+      color: white;
+      font-size: 2rem;
+      cursor: pointer;
+      transition: color 0.3s ease;
+    }
+
+    .close-modal:hover {
+      color: var(--primary);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    /* Footer */
+    .footer {
+      background: var(--dark);
+      color: white;
+      padding: 60px 20px 20px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 30px;
+      max-width: 1200px;
+      margin: 0 auto 40px;
+    }
+
+    .footer-col h4 {
+      color: white;
+      margin-bottom: 20px;
+      position: relative;
+      padding-bottom: 10px;
+    }
+
+    .footer-col h4:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 40px;
+      height: 2px;
+      background: var(--primary);
+    }
+
+    .footer-col ul {
+      list-style: none;
+    }
+
+    .footer-col ul li {
+      margin-bottom: 10px;
+    }
+
+    .footer-col ul li a {
+      color: rgba(255,255,255,0.7);
+      transition: color 0.3s ease;
+    }
+
+    .footer-col ul li a:hover {
+      color: var(--accent);
+    }
+
+    .social-links {
+      display: flex;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .social-links a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 50%;
+      color: white;
+      transition: all 0.3s ease;
+    }
+
+    .social-links a:hover {
+      background: var(--primary);
+      transform: translateY(-3px);
+    }
+
+    .footer-bottom {
+      text-align: center;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      font-size: 14px;
+      color: rgba(255,255,255,0.7);
+    }
+
+    /* Responsive Styles */
+       @media (max-width: 768px) {
+      .top-header {
+        font-size: 12px;
+        padding: 8px 0;
+      }
+      
+       .close-menu {
+    display: block;
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--gray);
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    z-index: 1001;
+    transition: color 0.3s ease;
+  }
+
+  .close-menu:hover {
+    color: var(--primary);
+  }
+      .burger-menu {
+        display: flex;
+      }
+      
+      .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        max-width: 300px;
+        height: 100vh;
+        background: white;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+        transition: all 0.3s ease;
+        padding: 20px;
+      }
+      
+      .nav-links.active {
+        right: 0;
+      }
+      
+      .nav-links ul {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+      }
+      
+      .nav-links li {
+        margin: 15px 0;
+        width: 100%;
+        text-align: center;
+      }
+      
+      .nav-links a {
+        display: block;
+        padding: 10px 0;
+      }
+      
+      .nav-links .btn {
+        margin-top: 20px;
+      }
+      
+      .section {
+        padding: 60px 0;
+      }
+      
+      .hero h1 {
+        font-size: 2rem;
+      }
+      
+      .values-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Back to Top Button */
+    .back-to-top {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      width: 50px;
+      height: 50px;
+      background: var(--primary);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+      z-index: 999;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    .back-to-top.visible {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .back-to-top:hover {
+      background: #c1121f;
+      transform: translateY(-3px);
+    }
+
+    @media (max-width: 480px) {
+      .hero {
+        padding: 60px 20px;
+      }
+      
+      .hero h1 {
+        font-size: 1.8rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Top Header -->
+  <div class="top-header">
+    New Client Support: <b>011 051 3906</b> | Existing Client Support: <b>info@thaboera.co.za</b> | 24/7 IT Emergency: <b>061 541 4097</b>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="navbar-container">
+      <a href="index.html">
+        <img src="images/Update/ThaboEra-Logo.png" alt="ThaboEra IT Solutions" class="logo">
+      </a>
+      
+      <div class="burger-menu" id="burgerMenu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      
+      <div class="nav-links" id="navLinks">
+        <span class="close-menu" id="closeMenuBtn">&times;</span>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about-us.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="client.html">Clients</a></li>
+          <li><a href="partners.html" class="active">Partners</a></li>
+          <li><a href="Policies.html">Policies</a></li>
+        </ul>
+        <a href="contact.html">Contact Us</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Our Strategic Partnerships</h1>
+    <p>At Thaboera IT Solutions, we believe in the power of collaboration and strategic alliances to deliver exceptional technology solutions.</p>
+  </section>
+
+  <!-- Main Content -->
+  <div class="container">
+    <!-- Benefits Section -->
+     <section class="section benefits-section">
+    <h2 class="section-title">The Benefits of Our Partnerships</h2>
+    <div class="benefits-grid">
+      <div class="benefit-card">
+        <div class="benefit-icon">
+          <i class="fas fa-sync-alt"></i>
+        </div>
+        <h3>Access to the Latest Technology</h3>
+        <p>We stay at the forefront of innovation, offering our clients access to the most advanced solutions in the industry through our partnerships with leading technology providers.</p>
+      </div>
+      
+      <div class="benefit-card">
+        <div class="benefit-icon">
+          <i class="fas fa-business-time"></i>
+        </div>
+        <h3>Comprehensive Services</h3>
+        <p>Our strategic alliances enable us to provide end-to-end services that meet the unique and evolving needs of our diverse client base across multiple industries.</p>
+      </div>
+      
+      <div class="benefit-card">
+        <div class="benefit-icon">
+          <i class="fas fa-award"></i>
+        </div>
+        <h3>Certifications and Accreditations</h3>
+        <p>Through our partnerships, our team maintains valuable certifications and accreditations, ensuring we deliver services that meet the highest industry standards.</p>
+      </div>
+    </div>
+</section>
+    <!-- Partners Section -->
+     <section class="section vpartners">
+    <h2 class="section-title">Our Valued Partners</h2>
+    <div class="partners-grid">
+      <div class="partner-card" onclick="openModal('images/cisco_partnership.jpg')">
+        <img src="images/cisco_partnership.jpg" alt="Cisco" class="partner-logo">
+        <h3>Cisco</h3>
+        <p>World leader in IT and networking, helping companies of all sizes transform how people connect, communicate, and collaborate.</p>
+      </div>
+      
+      <div class="partner-card" onclick="openModal('images/Lenovo.jpg')">
+        <img src="images/Lenovo.jpg" alt="Lenovo" class="partner-logo">
+        <h3>Lenovo</h3>
+        <p>Global technology leader delivering innovative consumer, commercial, and enterprise solutions.</p>
+      </div>
+      
+      <div class="partner-card" onclick="openModal('images/Dell%20Certificate_page-0001.jpg')">
+        <img src="images/Dell%20Certificate_page-0001.jpg" alt="Dell" class="partner-logo">
+        <h3>Dell Technologies</h3>
+        <p>Provider of essential infrastructure for organizations to build their digital future, transform IT, and protect their most important asset: information.</p>
+      </div>
+      
+      <div class="partner-card" onclick="openModal('images/WhatsApp%20Image%202024-09-04%20at%2003.42.08.jpg')">
+        <img src="images/WhatsApp%20Image%202024-09-04%20at%2003.42.08.jpg" alt="H3C" class="partner-logo">
+        <h3>H3C</h3>
+        <p>Leading provider of digital solutions for various scenarios including education, healthcare, and public service.</p>
+      </div>
+      
+      <div class="partner-card" onclick="openModal('images/HP%20Business%20Partner.jpg')">
+        <img src="images/HP%20Business%20Partner.jpg" alt="HP Business Partner" class="partner-logo">
+        <h3>HP Business Partner</h3>
+        <p>Global leader in personal systems and printing, creating technology that makes life better for everyone, everywhere.</p>
+      </div>
+    </div>
+  </div>
+  </section>
+
+  <!-- Modal -->
+  <div class="modal" id="partnerModal">
+    <span class="close-modal" onclick="closeModal()">&times;</span>
+    <div class="modal-content">
+      <img id="modalPartnerImage" class="modal-image" src="#" alt="Partner Logo">
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>Location</h4>
+        <ul>
+          <li>55 Richard's Drive</li>
+          <li>Halfway House</li>
+          <li>Midrand, 1685</li>
+          <li>South Africa</li>
+        </ul>
+      </div>
+      
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="services.html#itsupport">IT Support</a></li>
+          <li><a href="services.html#webdev">Web Development</a></li>
+          <li><a href="services.html#telecomm">Telecommunication</a></li>
+          <li><a href="services.html#graphicdec">Graphic Design</a></li>
+          <li><a href="services.html#appDev">App Development</a></li>
+          <li><a href="services.html#cloud">Cloud Services</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about-us.html">About Us</a></li>
+          <li><a href="client.html">Our Clients</a></li>
+          <li><a href="Policies.html">Policies</a></li>
+          <li><a href="careers.html">Careers</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <ul>
+          <li>Hours: Mon-Fri 8am-4pm</li>
+          <li>Sat-Sun: Closed</li>
+          <li>Public Holidays: Closed</li>
+        </ul>
+        <div class="social-links">
+          <a href="https://facebook.com/Thaboera" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://twitter.com/thaboera" target="_blank"><i class="fab fa-twitter"></i></a>
+          <a href="https://linkedin.com/company/thaboera" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://instagram.com/thaboerait" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; 2025 ThaboEra IT Solutions. All Rights Reserved.</p>
+      <p>Created by ThaboEra IT Solutions</p>
+    </div>
+  </footer>
+
+    <!-- Back to Top Button -->
+  <div class="back-to-top" id="backToTop">
+    <i class="fas fa-arrow-up"></i>
+  </div>
+
+  <script>
+    // Mobile Navigation
+    const burgerMenu = document.getElementById('burgerMenu');
+    const navLinks = document.getElementById('navLinks');
+    
+    burgerMenu.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+      burgerMenu.classList.toggle('active');
+    });
+
+      const closeMenuBtn = document.getElementById('closeMenuBtn');
+    closeMenuBtn.addEventListener('click', () => {
+      navLinks.classList.remove('active');
+      burgerMenu.classList.remove('active');
+      document.body.style.overflow = 'auto';
+    });
+    
+    // Modal functionality
+    function openModal(imageSrc) {
+      const modal = document.getElementById('partnerModal');
+      const modalImg = document.getElementById('modalPartnerImage');
+      
+      modal.style.display = 'flex';
+      modalImg.src = imageSrc;
+    }
+    
+    function closeModal() {
+      document.getElementById('partnerModal').style.display = 'none';
+    }
+    
+    // Close modal when clicking outside the image
+    window.addEventListener('click', function(event) {
+      const modal = document.getElementById('partnerModal');
+      if (event.target === modal) {
+        closeModal();
+      }
+    });
+    
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+
+      // Back to Top Button
+    const backToTopBtn = document.getElementById('backToTop');
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        backToTopBtn.classList.add('visible');
+      } else { 
+        backToTopBtn.classList.remove('visible');
+      }
+    });
+
+    backToTopBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,1537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services | Thaboera IT Solutions</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="images/T-ICON.png" rel="icon">
+  
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9GKP1HMJ67"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-9GKP1HMJ67');
+  </script>
+
+  <style>
+        :root {
+      --primary: #e30613;        
+      --secondary: #e60000;      
+      --accent: #ffb200;         
+      --light: #ffffff;         
+      --dark: #9e0000;          
+      --gray: #4b4f54;           
+      --dark-gray: #2c3034;      
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #333;
+      line-height: 1.6;
+      background-color: #f8f9fa;
+    }
+
+    /* Header Styles */
+    .top-header {
+      background: var(--dark);
+      color: white;
+      padding: 8px 0;
+      font-size: 14px;
+      text-align: center;
+    }
+
+    .top-header b {
+      color: var(--accent);
+    }
+
+  .navbar {
+  position: sticky;
+  top: 0;
+  background: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  transition: background 0.3s ease, padding 0.3s ease;
+}
+
+    .navbar-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .navbar.scrolled {
+  background: var(--primary);
+  padding: 10px 20px;
+}
+
+.logo {
+  height: 50px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+   .logo:hover {
+  transform: scale(1.05);
+  filter: brightness(1.2);
+}
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-links ul {
+      display: flex;
+      list-style: none;
+    }
+
+    .nav-links li {
+      margin: 0 15px;
+    }
+
+ .nav-links a {
+  color: var(--dark-gray);
+  font-weight: 500;
+  padding: 8px 0;
+  position: relative;
+  transition: color 0.3s ease, background 0.3s ease;
+  border-radius: 4px;
+}
+
+    .nav-links a:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--primary);
+      transition: width 0.3s ease;
+    }
+
+   .nav-links a:hover {
+  color: white;
+  background: var(--primary);
+  transform: translateY(-2px);
+}
+
+.nav-links a:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--primary);
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover:after,
+.nav-links a.active:after {
+  width: 100%;
+}
+
+    .nav-links a.active {
+      color: var(--primary);
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background: var(--primary);
+      color: white;
+      border: none;
+      border-radius: 4px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .btn:hover {
+      background: #c1121f;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .btn-outline {
+      background: transparent;
+      border: 2px solid var(--primary);
+      color: var(--primary);
+    }
+
+    .btn-outline:hover {
+      background: var(--primary);
+      color: white;
+    }
+
+     .burger-menu {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.close-menu {
+  display: none;
+}
+
+    .burger-menu span {
+      display: block;
+      width: 25px;
+      height: 3px;
+      background: var(--dark-gray);
+      margin: 5px 0;
+      transition: all 0.3s ease;
+    }
+
+      .close-menu {
+  font-size: 2rem;
+  cursor: pointer;
+  color: var(--gray);
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  z-index: 1001;
+  transition: color 0.3s ease;
+}
+
+.close-menu:hover {
+  color: var(--primary);
+}
+
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(135deg, var(--secondary) 0%, var(--dark) 100%);
+      color: white;
+      padding: 80px 20px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('images/pattern.png') repeat;
+      opacity: 0.05;
+      pointer-events: none;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+      position: relative;
+      animation: fadeInUp 1s ease;
+    }
+
+    .hero h1:after {
+      content: '';
+      display: block;
+      width: 80px;
+      height: 4px;
+      background: var(--primary);
+      margin: 15px auto 0;
+    }
+
+    .hero p {
+      max-width: 800px;
+      margin: 0 auto 30px;
+      font-size: 1.1rem;
+      opacity: 0.9;
+      animation: fadeInUp 1s ease 0.2s both;
+    }
+
+    .hero-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      animation: fadeInUp 1s ease 0.4s both;
+    }
+
+    /* Services Section */
+    .services-section {
+      padding: 80px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .section-title {
+      font-size: 2.2rem;
+      color: var(--secondary);
+      margin-bottom: 40px;
+      position: relative;
+      text-align: center;
+    }
+
+    .section-title:after {
+      content: '';
+      display: block;
+      width: 60px;
+      height: 4px;
+      background: var(--primary);
+      margin: 15px auto 0;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+      gap: 30px;
+    }
+
+    .service-card {
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    .service-card {
+  display: none;
+  transition: all 0.3s ease;
+}
+
+.service-card.visible {
+  display: block;
+}
+
+    .service-card.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .service-card:hover {
+      transform: translateY(-10px) scale(1.02);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+    }
+
+    .service-image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .service-card:hover .service-image {
+      transform: scale(1.1);
+    }
+
+    .service-content {
+      padding: 25px;
+      position: relative;
+      z-index: 1;
+      background: white;
+    }
+
+    .service-content h3 {
+      color: var(--secondary);
+      margin-bottom: 15px;
+      font-size: 1.4rem;
+    }
+
+    .service-content p {
+      color: var(--gray);
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+
+    .service-buttons {
+      display: flex;
+      gap: 10px;
+    }
+
+    .whatsapp-btn {
+      background: #25D366;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.3s ease;
+    }
+
+    .whatsapp-btn:hover {
+      background: #128C7E;
+      transform: translateY(-2px);
+    }
+
+    /* Service Modal */
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.8);
+      z-index: 1000;
+      overflow-y: auto;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .modal.active {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 1;
+    }
+
+    .modal-content {
+      background: white;
+      border-radius: 10px;
+      width: 90%;
+      max-width: 800px;
+      max-height: 90vh;
+      overflow-y: auto;
+      padding: 30px;
+      position: relative;
+      transform: translateY(-50px);
+      transition: transform 0.3s ease;
+    }
+
+    .modal.active .modal-content {
+      transform: translateY(0);
+    }
+
+    .modal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .modal-title {
+      font-size: 1.8rem;
+      color: var(--secondary);
+    }
+
+    .close-modal {
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: var(--gray);
+      transition: color 0.3s ease;
+    }
+
+    .close-modal:hover {
+      color: var(--primary);
+    }
+
+    .modal-body {
+      margin-bottom: 20px;
+    }
+
+    .modal-image {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+
+    .modal-features {
+      margin: 20px 0;
+    }
+
+    .feature-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 15px;
+      margin-top: 15px;
+    }
+
+    .feature-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+
+    .feature-icon {
+      color: var(--primary);
+      font-size: 1.2rem;
+      margin-top: 3px;
+    }
+
+    /* Service Tabs */
+    .service-tabs {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 40px;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .tab-btn {
+      padding: 10px 20px;
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-weight: 500;
+    }
+
+    .tab-btn:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+    }
+
+    .tab-btn.active {
+      background: var(--primary);
+      color: white;
+      border-color: var(--primary);
+    }
+
+    /* Video Section */
+    .video-section {
+      background: white;
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    .video-container {
+      max-width: 800px;
+      margin: 40px auto;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .video-container:hover {
+      transform: scale(1.02);
+    }
+
+    .video-container iframe {
+      width: 100%;
+      height: 450px;
+      border: none;
+    }
+
+    /* Testimonials */
+    .testimonials {
+      padding: 80px 20px;
+      background: white;
+    }
+
+    .testimonial-container {
+      max-width: 1000px;
+      margin: 40px auto 0;
+      position: relative;
+    }
+
+    .testimonial-slide {
+      padding: 30px;
+      background: #f8f9fa;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      text-align: center;
+      display: none;
+    }
+
+    .testimonial-slide.active {
+      display: block;
+      animation: fadeIn 0.5s ease;
+    }
+
+    .testimonial-text {
+      font-style: italic;
+      margin-bottom: 20px;
+      position: relative;
+    }
+
+    .testimonial-author {
+      font-weight: bold;
+      color: var(--secondary);
+    }
+
+    .testimonial-company {
+      color: var(--gray);
+      font-size: 0.9rem;
+    }
+
+    .testimonial-nav {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+      gap: 10px;
+    }
+
+    .testimonial-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: #ddd;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .testimonial-dot.active {
+      background: var(--primary);
+      transform: scale(1.2);
+    }
+
+    /* CTA Section */
+    .cta-section {
+      padding: 80px 20px;
+      background: linear-gradient(135deg, var(--primary) 0%, #c1121f 100%);
+      color: white;
+      text-align: center;
+    }
+
+    .cta-container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .cta-title {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .cta-text {
+      margin-bottom: 30px;
+      font-size: 1.1rem;
+      opacity: 0.9;
+    }
+
+    .cta-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .cta-btn {
+      background: white;
+      color: var(--primary);
+    }
+
+    .cta-btn:hover {
+      background: var(--secondary);
+      color: white;
+    }
+
+    .cta-btn-outline {
+      background: transparent;
+      border: 2px solid white;
+      color: white;
+    }
+
+    .cta-btn-outline:hover {
+      background: white;
+      color: var(--primary);
+    }
+
+    /* FAQ Section */
+    .faq-section {
+      padding: 80px 20px;
+      background: #f8f9fa;
+    }
+
+    .faq-container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      background: white;
+      border-radius: 8px;
+      margin-bottom: 15px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+      overflow: hidden;
+    }
+
+    .faq-question {
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      font-weight: 500;
+      transition: background 0.3s ease;
+    }
+
+    .faq-question:hover {
+      background: #f1f1f1;
+    }
+
+    .faq-question i {
+      transition: transform 0.3s ease;
+    }
+
+    .faq-item.active .faq-question i {
+      transform: rotate(180deg);
+    }
+
+    .faq-answer {
+      padding: 0 20px;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease, padding 0.3s ease;
+    }
+
+    .faq-item.active .faq-answer {
+      padding: 0 20px 20px;
+      max-height: 500px;
+    }
+
+    /* Footer */
+    .footer {
+      background: var(--dark);
+      color: white;
+      padding: 60px 20px 20px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 30px;
+      max-width: 1200px;
+      margin: 0 auto 40px;
+    }
+
+    .footer-col h4 {
+      color: white;
+      margin-bottom: 20px;
+      position: relative;
+      padding-bottom: 10px;
+    }
+
+    .footer-col h4:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 40px;
+      height: 2px;
+      background: var(--primary);
+    }
+
+    .footer-col ul {
+      list-style: none;
+    }
+
+    .footer-col ul li {
+      margin-bottom: 10px;
+    }
+
+    .footer-col ul li a {
+      color: rgba(255,255,255,0.7);
+      transition: color 0.3s ease;
+    }
+
+    .footer-col ul li a:hover {
+      color: var(--accent);
+    }
+
+    .social-links {
+      display: flex;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .social-links a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 50%;
+      color: white;
+      transition: all 0.3s ease;
+    }
+
+    .social-links a:hover {
+      background: var(--primary);
+      transform: translateY(-3px);
+    }
+
+    .footer-bottom {
+      text-align: center;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      font-size: 14px;
+      color: rgba(255,255,255,0.7);
+    }
+
+    /* Back to Top Button */
+    .back-to-top {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      width: 50px;
+      height: 50px;
+      background: var(--primary);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+      z-index: 999;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    .back-to-top.visible {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .back-to-top:hover {
+      background: #c1121f;
+      transform: translateY(-3px);
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+   @keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+    /* Responsive Styles */
+    @media (max-width: 992px) {
+      .services-grid {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      }
+    }
+
+     @media (max-width: 768px) {
+      .top-header {
+        font-size: 12px;
+        padding: 8px 0;
+      }
+
+       .close-menu {
+    display: block;
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--gray);
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    z-index: 1001;
+    transition: color 0.3s ease;
+  }
+
+  .close-menu:hover {
+    color: var(--primary);
+  }
+      
+      .burger-menu {
+        display: flex;
+      }
+      
+      .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        max-width: 300px;
+        height: 100vh;
+        background: white;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+        transition: all 0.3s ease;
+        padding: 20px;
+      }
+      
+      .nav-links.active {
+        right: 0;
+      }
+      
+      .nav-links ul {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+      }
+      
+      .nav-links li {
+        margin: 15px 0;
+        width: 100%;
+        text-align: center;
+      }
+      
+      .nav-links a {
+        display: block;
+        padding: 10px 0;
+      }
+      
+      .nav-links .btn {
+        margin-top: 20px;
+      }
+      
+      .section {
+        padding: 60px 0;
+      }
+      
+      .hero h1 {
+        font-size: 2rem;
+      }
+      
+      .values-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .hero {
+        padding: 80px 20px;
+      }
+      
+      .hero h1 {
+        font-size: 1.8rem;
+      }
+      
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .video-container iframe {
+        height: 250px;
+      }
+
+      .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Top Header -->
+  <div class="top-header">
+    New Client Support: <b>011 051 3906</b> | Existing Client Support: <b>info@thaboera.co.za</b> | 24/7 IT Emergency: <b>061 541 4097</b>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="navbar-container">
+      <a href="index.html">
+        <img src="images/Update/ThaboEra-Logo.png" alt="ThaboEra IT Solutions" class="logo">
+      </a>
+      
+      <div class="burger-menu" id="burgerMenu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      
+      <div class="nav-links" id="navLinks">
+        <span class="close-menu" id="closeMenuBtn">&times;</span>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about-us.html">About</a></li>
+          <li><a href="services.html" class="active">Services</a></li>
+          <li><a href="client.html">Clients</a></li>
+          <li><a href="partners.html">Partners</a></li>
+          <li><a href="Policies.html">Policies</a></li>
+        </ul>
+        <a href="contact.html">Contact Us</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Our IT Services</h1>
+    <p>Comprehensive technology solutions tailored to your business needs</p>
+    <div class="hero-buttons">
+      <a href="#services" class="btn cta-btn">Explore Services</a>
+      <a href="contact.html" class="btn cta-btn-outline">Get a Quote</a>
+    </div>
+  </section>
+
+  <!-- Service Tabs -->
+  <section class="services-section">
+    <h2 class="section-title">Our Service Categories</h2>
+    <div class="service-tabs">
+      <div class="tab-btn active" data-category="all">All Services</div>
+      <div class="tab-btn" data-category="tech">Technology Solutions</div>
+      <div class="tab-btn" data-category="development">Development</div>
+      <div class="tab-btn" data-category="design">Design</div>
+      <div class="tab-btn" data-category="support">Support</div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="services-section" id="services">
+    <div class="services-grid">
+      <!-- IT Support -->
+      <div class="service-card visible" id="itsupport" data-category="tech support">
+        <img src="images/pexels-goumbik-317371.jpg" alt="IT Support" class="service-image">
+        <div class="service-content">
+          <h3>IT Support</h3>
+          <p>We provide Remote, Onsite, and Telephonic Support at the comfort of your home and office. Our proactive maintenance ensures optimal performance for your servers and network infrastructure.</p>
+          <div class="service-buttons">
+            <button class="btn btn-outline read-more-btn" data-service="itsupport">Read More</button>
+            <a href="https://wa.me/27615414097" target="_blank" class="btn whatsapp-btn">
+              <i class="fab fa-whatsapp"></i> WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Web Development -->
+      <div class="service-card visible" id="webdev" data-category="development">
+        <img src="images/pexels-luis-gomes-166706-546819.jpg" alt="Web Development" class="service-image">
+        <div class="service-content">
+          <h3>Web Development</h3>
+          <p>We specialize in building custom websites that align perfectly with your brand identity and business goals. Our team creates web solutions that are as unique as your vision.</p>
+          <div class="service-buttons">
+            <button class="btn btn-outline read-more-btn" data-service="webdev">Read More</button>
+            <a href="https://wa.me/27615414097" target="_blank" class="btn whatsapp-btn">
+              <i class="fab fa-whatsapp"></i> WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Telecommunication -->
+      <div class="service-card visible" id="telecomm" data-category="tech">
+        <img src="images/pexels-marcelo-moreira-988124-2186325.jpg" alt="Telecommunication" class="service-image">
+        <div class="service-content">
+          <h3>Telecommunication</h3>
+          <p>Our comprehensive telecommunication services meet the unique needs of your business while ensuring reliability, security, and cost-effectiveness.</p>
+          <div class="service-buttons">
+            <button class="btn btn-outline read-more-btn" data-service="telecomm">Read More</button>
+            <a href="https://wa.me/27615414097" target="_blank" class="btn whatsapp-btn">
+              <i class="fab fa-whatsapp"></i> WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Graphic Design -->
+      <div class="service-card visible" id="graphicdec" data-category="design">
+        <img src="images/pexels-mikechie-esparagoza-749296-1601773.jpg" alt="Graphic Design" class="service-image">
+        <div class="service-content">
+          <h3>Graphic Design</h3>
+          <p>We create powerful and visually captivating designs to elevate your brand, enhance user experiences, and convey your message effectively through stunning visuals.</p>
+          <div class="service-buttons">
+            <button class="btn btn-outline read-more-btn" data-service="graphicdec">Read More</button>
+            <a href="https://wa.me/27615414097" target="_blank" class="btn whatsapp-btn">
+              <i class="fab fa-whatsapp"></i> WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- App Development -->
+      <div class="service-card visible" id="appDev" data-category="development">
+        <img src="images/pexels-kevin-ku-92347-577585.jpg" alt="App Development" class="service-image">
+        <div class="service-content">
+          <h3>App Development</h3>
+          <p>We specialize in designing and developing cutting-edge mobile apps that empower your business, engage your audience, and drive growth.</p>
+          <div class="service-buttons">
+            <button class="btn btn-outline read-more-btn" data-service="appDev">Read More</button>
+            <a href="https://wa.me/27615414097" target="_blank" class="btn whatsapp-btn">
+              <i class="fab fa-whatsapp"></i> WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Cloud Services -->
+      <div class="service-card visible" id="cloud" data-category="tech">
+        <img src="images/pexels-artunchained-325229.jpg" alt="Cloud Services" class="service-image">
+        <div class="service-content">
+          <h3>Cloud Services</h3>
+          <p>We provide comprehensive cloud services that enhance scalability, efficiency, and innovation for your business in the digital age.</p>
+          <div class="service-buttons">
+            <button class="btn btn-outline read-more-btn" data-service="cloud">Read More</button>
+            <a href="https://wa.me/27615414097" target="_blank" class="btn whatsapp-btn">
+              <i class="fab fa-whatsapp"></i> WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Networks -->
+      <div class="service-card visible" id="networks" data-category="tech support">
+        <img src="images/pexels-brett-sayles-2881229.jpg" alt="Networks" class="service-image">
+        <div class="service-content">
+          <h3>Networks</h3>
+          <p>We deliver comprehensive network services that empower businesses to maintain robust, secure, and high-performing network environments.</p>
+          <div class="service-buttons">
+            <button class="btn btn-outline read-more-btn" data-service="networks">Read More</button>
+            <a href="https://wa.me/27615414097" target="_blank" class="btn whatsapp-btn">
+              <i class="fab fa-whatsapp"></i> WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Video Section -->
+  <section class="video-section">
+    <h2 class="section-title">See Our Services in Action</h2>
+    <div class="video-container">
+      <iframe src="https://www.youtube.com/embed/qKy6tfTDMz4" title="Thaboera IT Solutions" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+  </section>
+
+  <!-- Testimonials 
+  <section class="testimonials">
+    <h2 class="section-title">What Our Clients Say</h2>
+    <div class="testimonial-container">
+      <div class="testimonial-slide active">
+        <div class="testimonial-text">
+          "Thaboera IT Solutions transformed our digital infrastructure, providing seamless integration and 24/7 support. Their team's expertise and dedication are unmatched in the industry."
+        </div>
+        <div class="testimonial-author">James Khumalo</div>
+        <div class="testimonial-company">CEO, Khumalo Enterprises</div>
+      </div>
+      <div class="testimonial-slide">
+        <div class="testimonial-text">
+          "Working with Thaboera has been a game-changer for our business. Their innovative solutions helped us streamline operations and increase productivity by 40% in just six months."
+        </div>
+        <div class="testimonial-author">Nomsa Dlamini</div>
+        <div class="testimonial-company">Director, Dlamini Holdings</div>
+      </div>
+      <div class="testimonial-slide">
+        <div class="testimonial-text">
+          "The team at Thaboera understands our business needs perfectly. They don't just provide IT services - they become true partners in our digital transformation journey."
+        </div>
+        <div class="testimonial-author">Thomas Smith</div>
+        <div class="testimonial-company">CIO, African Ventures</div>
+      </div>
+      <div class="testimonial-nav">
+        <div class="testimonial-dot active" data-slide="0"></div>
+        <div class="testimonial-dot" data-slide="1"></div>
+        <div class="testimonial-dot" data-slide="2"></div>
+      </div>
+    </div>
+  </section> -->
+
+  <!-- FAQ Section -->
+  <section class="faq-section">
+    <h2 class="section-title">Frequently Asked Questions</h2>
+    <div class="faq-container">
+      <div class="faq-item">
+        <div class="faq-question">
+          What industries do you specialize in?
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          Any and all IT solutions across various industries including finance, healthcare, education, retail, and manufacturing. Our solutions are tailored to meet the specific needs of each sector.
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">
+          How quickly can you respond to support requests?
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          Our response times vary based on the priority level of the issue. For critical emergencies, we respond within 1 day. Standard requests are typically addressed within 3-7 business days.
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">
+          Do you offer customized solutions?
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          Absolutely! We pride ourselves on developing customized solutions that address your unique business challenges. Every solution we provide is tailored to your specific requirements.
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">
+          What is your pricing structure?
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          Our pricing depends on the scope and complexity of the project. We offer flexible pricing models including fixed-price projects, retainer agreements, and hourly rates for specific services. Essentially "Tailor made services".
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section" id="contact">
+    <div class="cta-container">
+      <h2 class="cta-title">Ready to Transform Your Business?</h2>
+      <p class="cta-text">Discover how Thaboera IT Solutions can help your business thrive in the digital age.</p>
+      <div class="cta-buttons">
+        <a href="contact.html" class="btn cta-btn">Get in Touch</a>
+        <a href="tel:+27615414097" class="btn cta-btn-outline">Call Us Now</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Modal -->
+  <div class="modal" id="serviceModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title" id="modalServiceTitle">Service Title</h3>
+        <span class="close-modal">&times;</span>
+      </div>
+      <div class="modal-body">
+        <img id="modalServiceImage" src="" alt="Service Image" class="modal-image">
+        <p id="modalServiceDescription"></p>
+        <div class="modal-features">
+          <h4>Key Features</h4>
+          <div class="feature-list" id="modalServiceFeatures">
+            <!-- Features will be added dynamically -->
+          </div>
+        </div>
+        <div class="service-buttons">
+          <a href="contact.html" class="btn">Get Started</a>
+          <a href="https://wa.me/27615414097" target="_blank" class="btn whatsapp-btn">
+            <i class="fab fa-whatsapp"></i> WhatsApp Us
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>Location</h4>
+        <ul>
+          <li>55 Richard's Drive</li>
+          <li>Halfway House</li>
+          <li>Midrand, 1685</li>
+          <li>South Africa</li>
+        </ul>
+      </div>
+      
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="services.html#cloud">Cloud Services</a></li>
+          <li><a href="services.html#itsupport">IT Support</a></li>
+          <li><a href="services.html#graphicdec">Graphic Design</a></li>
+          <li><a href="services.html#webdev">Web Development</a></li>
+          <li><a href="services.html#appdev">App Development</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about-us.html">About Us</a></li>
+          <li><a href="client.html">Our Clients</a></li>
+          <li><a href="Policies.html">Policies</a></li>
+          <li><a href="careers.html">Careers</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <ul>
+          <li>Hours: Mon-Fri 8am-4pm</li>
+          <li>Sat-Sun: Closed</li>
+          <li>Public Holidays: Closed</li>
+        </ul>
+        <div class="social-links">
+          <a href="https://facebook.com/Thaboera" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://twitter.com/thaboera" target="_blank"><i class="fab fa-twitter"></i></a>
+          <a href="https://linkedin.com/company/thaboera" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://instagram.com/thaboerait" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; 2025 ThaboEra IT Solutions. All Rights Reserved.</p>
+      <p>Created by ThaboEra IT Solutions</p>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <div class="back-to-top" id="backToTop">
+    <i class="fas fa-arrow-up"></i>
+  </div>
+
+  <script>
+    // Mobile Navigation
+    const burgerMenu = document.getElementById('burgerMenu');
+    const navLinks = document.getElementById('navLinks');
+    
+    burgerMenu.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+      burgerMenu.classList.toggle('active');
+    });
+
+      const closeMenuBtn = document.getElementById('closeMenuBtn');
+    closeMenuBtn.addEventListener('click', () => {
+      navLinks.classList.remove('active');
+      burgerMenu.classList.remove('active');
+      document.body.style.overflow = 'auto';
+    });
+
+    //button acivation
+     document.addEventListener('DOMContentLoaded', function () {
+    const tabButtons = document.querySelectorAll('.tab-btn');
+    const serviceCards = document.querySelectorAll('.service-card');
+
+    tabButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        // Remove 'active' class from all buttons
+        tabButtons.forEach(btn => btn.classList.remove('active'));
+
+        // Add 'active' class to the clicked button
+        button.classList.add('active');
+
+        const category = button.getAttribute('data-category');
+
+        serviceCards.forEach(card => {
+          const cardCategory = card.getAttribute('data-category');
+
+          if (category === 'all') {
+            card.classList.add('visible');
+          } else if (cardCategory.includes(category)) {
+            card.classList.add('visible');
+          } else {
+            card.classList.remove('visible');
+          }
+        });
+      });
+    });
+  });
+    
+// Service Modal
+const readMoreBtns = document.querySelectorAll('.read-more-btn');
+const modal = document.getElementById('serviceModal');
+const modalTitle = document.getElementById('modalServiceTitle');
+const modalImage = document.getElementById('modalServiceImage');
+const modalDescription = document.getElementById('modalServiceDescription');
+const modalFeatures = document.getElementById('modalServiceFeatures');
+const closeModal = document.querySelector('.close-modal');
+
+
+    // Service data
+    const services = {
+      itsupport: {
+        title: "IT Support",
+        image: "images/pexels-goumbik-317371.jpg",
+        description: "We provide comprehensive IT support services including remote, onsite, and telephonic assistance. Our proactive maintenance ensures optimal performance for your servers and network infrastructure, minimizing downtime and maximizing productivity.",
+        features: [
+          "24/7 monitoring and support",
+          "Proactive system maintenance",
+          "Hardware and software troubleshooting",
+          "Network setup and configuration",
+          "Security updates and patches",
+          "Data backup solutions"
+        ]
+      },
+      webdev: {
+        title: "Web Development",
+        image: "images/pexels-luis-gomes-166706-546819.jpg",
+        description: "Our web development services create custom solutions that align perfectly with your brand identity and business goals. We build responsive, user-friendly websites that drive engagement and conversions.",
+        features: [
+          "Custom website design",
+          "E-commerce solutions",
+          "Content Management Systems",
+          "SEO optimization",
+          "Mobile-responsive design",
+          "Website maintenance"
+        ]
+      },
+      telecomm: {
+        title: "Telecommunication",
+        image: "images/pexels-marcelo-moreira-988124-2186325.jpg",
+        description: "Our telecommunication services provide reliable, secure, and cost-effective solutions tailored to your business needs. We implement cutting-edge communication technologies to keep your team connected.",
+        features: [
+          "VoIP phone systems",
+          "Video conferencing solutions",
+          "Unified communications",
+          "Network infrastructure",
+          "Cloud-based telephony",
+          "Mobile integration"
+        ]
+      },
+      graphicdec: {
+        title: "Graphic Design",
+        image: "images/pexels-mikechie-esparagoza-749296-1601773.jpg",
+        description: "Our graphic design services create powerful visuals that elevate your brand and communicate your message effectively. We deliver stunning designs that captivate your audience and enhance user experiences.",
+        features: [
+          "Logo and brand identity",
+          "Marketing collateral",
+          "Social media graphics",
+          "Infographics",
+          "Print materials",
+          "UI/UX design"
+        ]
+      },
+      appDev: {
+        title: "App Development",
+        image: "images/pexels-kevin-ku-92347-577585.jpg",
+        description: "We specialize in designing and developing cutting-edge mobile applications that empower your business, engage your audience, and drive growth across iOS and Android platforms.",
+        features: [
+          "Custom mobile app development",
+          "Cross-platform solutions",
+          "UI/UX design",
+          "App testing and QA",
+          "App store deployment",
+          "Ongoing maintenance"
+        ]
+      },
+      cloud: {
+        title: "Cloud Services",
+        image: "images/pexels-artunchained-325229.jpg",
+        description: "Our cloud services provide scalable, efficient, and innovative solutions to help your business thrive in the digital age. We offer secure cloud migration, management, and optimization services.",
+        features: [
+          "Cloud migration",
+          "Infrastructure as a Service",
+          "Software as a Service",
+          "Cloud security",
+          "Data backup and recovery",
+          "Hybrid cloud solutions"
+        ]
+      },
+      networks: {
+        title: "Networks",
+        image: "images/pexels-brett-sayles-2881229.jpg",
+        description: "Our network services deliver robust, secure, and high-performing solutions tailored to your business needs. We design, implement, and maintain network infrastructures that support your operations.",
+        features: [
+          "Network design and implementation",
+          "Wireless networking",
+          "Network security",
+          "VPN solutions",
+          "Network monitoring",
+          "Performance optimization"
+        ]
+      }
+    };
+    
+// Read More functionality
+readMoreBtns.forEach(btn => {
+  btn.addEventListener('click', function () {
+    const serviceId = this.dataset.service;
+    const service = services[serviceId];
+
+    modalTitle.textContent = service.title;
+    modalImage.src = service.image;
+    modalImage.alt = service.title;
+    modalDescription.textContent = service.description;
+
+    modalFeatures.innerHTML = ''; // Clear old features
+
+    service.features.forEach(feature => {
+      const featureItem = document.createElement('div');
+      featureItem.className = 'feature-item';
+      featureItem.innerHTML = `
+        <div class="feature-icon"><i class="fas fa-check-circle"></i></div>
+        <div>${feature}</div>
+      `;
+      modalFeatures.appendChild(featureItem);
+    });
+
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden'; // Prevent background scrolling
+  });
+});
+
+document.querySelectorAll('.faq-question').forEach(question => {
+  question.addEventListener('click', function() {
+    const faqItem = this.closest('.faq-item');
+    
+    // Toggle the answer visibility
+    faqItem.classList.toggle('active');
+    
+    // Close other items if you want only one open at a time
+    document.querySelectorAll('.faq-item').forEach(item => {
+      if (item !== faqItem) {
+        item.classList.remove('active');
+      }
+    });
+  });
+});
+
+
+// Optional: Close modal logic
+closeModal.addEventListener('click', () => {
+  modal.classList.remove('active');
+  document.body.style.overflow = ''; // Re-enable scrolling
+});
+
+
+
+    // Testimonial Slider
+    const testimonialSlides = document.querySelectorAll('.testimonial-slide');
+    const testimonialDots = document.querySelectorAll('.testimonial-dot');
+    
+    let currentSlide = 0;
+
+    function showSlide(index) {
+      testimonialSlides.forEach((slide, i) => {
+        slide.classList.remove('active');
+        testimonialDots[i].classList.remove('active');
+      });
+      testimonialSlides[index].classList.add('active');
+      testimonialDots[index].classList.add('active');
+    }
+
+    testimonialDots.forEach((dot, index) => {
+      dot.addEventListener('click', () => {
+        currentSlide = index;
+        showSlide(currentSlide);
+      });
+    });
+
+    // Auto slide every 5 seconds
+    setInterval(() => {
+      currentSlide = (currentSlide + 1) % testimonialSlides.length;
+      showSlide(currentSlide);
+    }, 5000);
+
+    // Back to Top Button
+    const backToTopBtn = document.getElementById('backToTop');
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        backToTopBtn.classList.add('visible');
+      } else { 
+        backToTopBtn.classList.remove('visible');
+      }
+    });
+
+    backToTopBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+  </script>
